@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Simple E-commerce</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center;">"Welcome to Flavors Bakery, a place where taste and quality come together to create a delightful experience for your taste buds. We are a family-owned bakery that has been serving the community for many years with the best baked goods made from scratch.
+
+  At Flavors Bakery, we believe that every customer deserves the best, and that's why we use only the freshest and finest ingredients in our recipes. Our skilled bakers and pastry chefs are dedicated to creating a wide range of delectable treats that will leave you craving for more.
+  
+  From our freshly baked bread, mouth-watering cakes and pastries, to our savory pies and sandwiches, we offer a wide range of delicious baked goods that cater to every taste and preference. Our menu is constantly evolving with new and exciting flavors to keep your taste buds satisfied.
+  
+  We take pride in our warm and welcoming atmosphere that makes every customer feel right at home. Our friendly and knowledgeable staff is always ready to assist you with any questions or recommendations you may need.
+  
+  At Flavors Bakery, we value our community and strive to give back by using eco-friendly and sustainable practices. We are committed to reducing our environmental impact and supporting local farmers and suppliers.
+  
+  Whether you're looking for a sweet treat to indulge in, or a savory snack to satisfy your hunger, Flavors Bakery has got you covered. Visit us today and discover why we are the go-to destination for all your bakery needs." </h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+<!--
+developed By : Sonam Syangbo
+-->
+
+</html>
